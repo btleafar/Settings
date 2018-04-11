@@ -19,7 +19,7 @@ for i in $(find . -name ".git" | cut -c 3-); do
 	git pull origin master;
 
 	# lets get back to the CUR_DIR
-	cd $CUR_DIR
+	cd "$CUR_DIR"
 done
 
 echo "\n\033[32mComplete!\033[0m\n"
