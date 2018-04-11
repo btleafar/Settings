@@ -25,6 +25,7 @@ alias applyalias='source ~/.bashrc'
 alias update='sudo apt-get update && sudo apt-get upgrade'
 alias upgrade='sudo apt-get update && sudo apt-get dist-upgrade'
 alias fullupgrade='sudo apt-get update && sudo apt-get full-upgrade'
+alias lampp='pathere=$(pwd) && cd /opt/lampp && sudo ./manager-linux-x64.run && cd $pathere && unset pathere'
 alias gogit='cd ~/Documents/GIT/repo/'
 
 #DNA = Download new aliases & UNA = Upload new aliases
