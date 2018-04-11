@@ -27,7 +27,12 @@ alias upgrade='sudo apt-get update && sudo apt-get dist-upgrade'
 alias fullupgrade='sudo apt-get update && sudo apt-get full-upgrade'
 alias lampp='pathere=$(pwd) && cd /opt/lampp && sudo ./manager-linux-x64.run && cd $pathere && unset pathere'
 alias gogit='cd ~/Documents/GIT/repo/'
+alias gpl='git pull origin master'
+alias gps='git push origin master'
+alias gs='git status'
+alias ga='git add'
+alias gc='git commit -m'
 
 #DNA = Download new aliases & UNA = Upload new aliases
-alias dna='curl https://raw.githubusercontent.com/idevhive/Settings/master/Bash/.bash_aliases > ~.bashaliases'
+alias dna='curl https://raw.githubusercontent.com/idevhive/Settings/master/Bash/.bash_aliases > ~/.bashaliases'
 #alias una=
