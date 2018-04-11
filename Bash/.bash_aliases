@@ -25,3 +25,8 @@ alias applyalias='source ~/.bashrc'
 alias update='sudo apt-get update && sudo apt-get upgrade'
 alias upgrade='sudo apt-get update && sudo apt-get dist-upgrade'
 alias fullupgrade='sudo apt-get update && sudo apt-get full-upgrade'
+alias gogit='cd ~/Documents/GIT/repo/'
+
+#DNA = Download new aliases & UNA = Upload new aliases
+alias dna='curl https://raw.githubusercontent.com/idevhive/Settings/master/Bash/.bash_aliases > ~.bashaliases'
+#alias una=
