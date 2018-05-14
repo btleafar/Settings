@@ -1,0 +1,37 @@
+#Aliases
+
+alias c='clear'
+alias h='history'
+alias j='jobs -l'
+alias .1='cd ..'
+alias .2='cd ../../'
+alias .3='cd ../../../'
+alias ll='ls -l'
+alias la='ls -al'
+alias vi=vim
+alias svi='sudo vi'
+alias edit='vim'
+alias now='date +"%T"'
+alias timenow=now
+alias datenow='date +"%m-%d-%y"'
+alias diff='colordiff'
+alias vimconfig='vim ~/.vimrc'
+alias ping='ping -c 5'
+alias fastping='ping -c 100 -s.2'
+alias ports='netstat -tulanp'
+alias gitignorehere='curl https://raw.githubusercontent.com/idevHive/Settings/master/Git/.gitignore > .gitignore'
+alias editalias='vim ~/.bash_aliases'
+alias applyalias='source ~/.bashrc'
+alias update='sudo dnf update && sudo dnf upgrade'
+alias lampp='pathere=$(pwd) && cd /opt/lampp && sudo ./manager-linux-x64.run && cd $pathere && unset pathere'
+alias gogit='cd ~/Documents/GIT/repo/'
+alias gobash='cd ~/Documents/GIT/repo/Settings/Bash/'
+alias gpl='git pull origin master'
+alias gps='git push origin master'
+alias gs='git status'
+alias ga='git add'
+alias gc='git commit -m'
+
+#DNA = Download new aliases & UNA = Upload new aliases
+alias dna='curl https://raw.githubusercontent.com/idevhive/Settings/master/Bash/.bash_aliases_fedora > ~/.bashaliases'
+alias una='gobash && cp ~/.bash_aliases .bash_aliases_fedora && ga . && gc "Update aliases for Fedora" && gps'
