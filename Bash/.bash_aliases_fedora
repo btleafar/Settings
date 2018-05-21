@@ -43,10 +43,8 @@ alias ga='git add'
 alias gc='git commit -m'
 #DNA = Download new aliases & UNA = Upload new aliases
 alias dna='curl https://raw.githubusercontent.com/idevhive/Settings/master/Bash/.bash_aliases_fedora > ~/.bashaliases'
-alias una='pathere=$(pwd) && gobash && cp ~/.bash_aliases .bash_aliases_fedora \
-	&& ga . && gc "Update aliases for Fedora" && gps && cd $pathere && unset pathere'
+alias una='pathere=$(pwd) && gobash && cp ~/.bash_aliases .bash_aliases_fedora && ga . && gc "Update aliases for Fedora" && gps && cd $pathere && unset pathere'
 
 #XAMPP-related aliases
-alias lampp='pathere=$(pwd) && cd /opt/lampp && sudo ./manager-linux-x64.run \
-	&& cd $pathere && unset pathere'
+alias lampp='pathere=$(pwd) && cd /opt/lampp && sudo ./manager-linux-x64.run && cd $pathere && unset pathere'
 
