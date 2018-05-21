@@ -1,0 +1,9 @@
+# This is Git's per-user configuration file.
+[core]
+	editor = subl -n -w
+	excludesfile = /home/rtb/.gitignore_global
+[color]
+	ui = true
+[user]
+	name = Rafael Torres Balabukha
+	email = rafael00.tb@gmail.com
