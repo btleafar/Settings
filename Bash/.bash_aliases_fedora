@@ -1,7 +1,8 @@
-#Bash Aliases - This is compatible with Fedora only (because it uses 'dnf' on line 7)
+#Bash Aliases - This is compatible with Fedora only
+#(because it uses 'dnf' on the section starting in line 7)
 #for general usage ignore/modify/remove reference to it. Although there is a version of
 #this file for Debian bassed systems (apt) on my Github here:
-#'/Settings/Bash/.bash_aliases_debian'
+#https://raw.githubusercontent.com/idevHive/Settings/master/Bash/.bash_aliases_debian'
 
 #System-based aliases
 alias update='sudo dnf update && sudo dnf upgrade'
@@ -48,4 +49,3 @@ alias una='pathere=$(pwd) && gobash && cp ~/.bash_aliases .bash_aliases_fedora &
 
 #XAMPP-related aliases
 alias lampp='pathere=$(pwd) && cd /opt/lampp && sudo ./manager-linux-x64.run && cd $pathere && unset pathere'
-
