@@ -28,6 +28,7 @@ alias vimconfig='vim ~/.vimrc'
 alias sublime='subl' #subl & sublime-text are the same
 alias editalias='vim ~/.bash_aliases'
 alias applyalias='source ~/.bashrc'
+alias gitcomplete='curl -OL https://github.com/git/git/raw/master/contrib/completion/git-completion.bash > ~/.git-completion.bash'
 
 #Networks
 alias ping='ping -c 5'
