@@ -1,9 +1,53 @@
 # This is Git's per-user configuration file.
-[core]
-	editor = subl -n -w
-	excludesfile = /home/rtb/.gitignore_global
-[color]
-	ui = true
 [user]
 	name = Rafael Torres Balabukha
 	email = rafael00.tb@gmail.com
+
+[core]
+	editor = subl -n -w
+	excludesfile = /home/rtb/.gitignore_global
+	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+
+[color]
+	ui = true
+
+[web]
+	browser = mozilla-firefox
+
+[push]
+	default = matching
+
+[color "branch"]
+	current = yellow bold
+	local = green bold
+	remote = cyan bold
+
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+
+[color "status"]
+	added = green bold
+	changed = yellow bold
+	untracked = red bold
+
+[difftool]
+	prompt = false
+
+[gitflow "prefix"]
+	feature = feature-
+	release = release-
+	hotfix = hotfix-
+	support = support-
+	versiontag = v
+
+[github]
+	user = idevHive
+
+[alias]
+	hist = log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short
+	whois = "!sh -c 'git log -i -1 --pretty=\"format:%an <%ae>\n\" --author=\"$1\"' -"
+	whatis = show -s --pretty='tformat:%h (%s, %ad)' --date=short
