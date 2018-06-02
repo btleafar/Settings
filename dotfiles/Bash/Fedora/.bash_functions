@@ -256,6 +256,18 @@ function v() {
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+# `a` with no arguments opens the current directory in Atom, otherwise opens the
+# given location
+function a() {
+    if [ $# -eq 0 ]; then
+        atom .;
+    else
+        atom "$@";
+    fi;
+}
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
 # Create a new directory and enter it
 function mkd() {
     mkdir -p "$@" && cd "$_";
