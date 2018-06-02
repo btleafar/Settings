@@ -2,9 +2,51 @@
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+# Extract archives - use: extract <file>
+# Based on http://dotfiles.org/~pseup/.bashrc
+function extract() {
+    if [ -f "$1" ] ; then
+        local filename=$(basename "$1")
+        local foldername="${filename%%.*}"
+        local fullpath=`perl -e 'use Cwd "abs_path";print abs_path(shift)' "$1"`
+        local didfolderexist=false
+        if [ -d "$foldername" ]; then
+            didfolderexist=true
+            read -p "$foldername already exists, " \
+            "do you want to overwrite it? (y/n) " -n 1
+            echo
+            if [[ $REPLY =~ ^[Nn]$ ]]; then
+                return
+            fi
+        fi
+        mkdir -p "$foldername" && cd "$foldername"
+        case $1 in
+            *.tar.bz2) tar xjf "$fullpath" ;;
+            *.tar.gz) tar xzf "$fullpath" ;;
+            *.tar.xz) tar Jxvf "$fullpath" ;;
+            *.tar.Z) tar xzf "$fullpath" ;;
+            *.tar) tar xf "$fullpath" ;;
+            *.taz) tar xzf "$fullpath" ;;
+            *.tb2) tar xjf "$fullpath" ;;
+            *.tbz) tar xjf "$fullpath" ;;
+            *.tbz2) tar xjf "$fullpath" ;;
+            *.tgz) tar xzf "$fullpath" ;;
+            *.txz) tar Jxvf "$fullpath" ;;
+            *.zip) unzip "$fullpath" ;;
+            *) echo "'$1' cannot be extracted via extract()" \
+                && cd .. && ! $didfolderexist && rm -r "$foldername" ;;
+        esac
+    else
+        echo "'$1' is not a valid file"
+    fi
+}
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
 # Create data URI from a file.
 
-datauri() {
+function datauri() {
 
     local mimeType=""
 
@@ -29,7 +71,7 @@ datauri() {
 
 # Delete files that match a certain pattern from the current directory.
 
-delete-files() {
+function cleanup() {
     local q="${1:-*.DS_Store}"
     find . -type f -name "$q" -ls -delete
 }
@@ -38,7 +80,7 @@ delete-files() {
 
 # Get gzip information (gzipped file size + reduction size).
 
-gz() {
+function gz() {
 
     declare -i gzippedSize=0
     declare -i originalSize=0
@@ -74,7 +116,7 @@ gz() {
 # Human readable file size
 # (because `du -h` doesn't cut it for me).
 
-hrfs() {
+function hrfs() {
 
     printf "%s" "$1" |
     awk '{
@@ -108,7 +150,7 @@ hrfs() {
 
 # Create new directories and enter the first one.
 
-mkd() {
+function mkd() {
     if [ -n "$*" ]; then
 
         mkdir -p "$@"
@@ -124,7 +166,7 @@ mkd() {
 
 # Process phone images.
 
-ppi() {
+function ppi() {
     command -v "convert" &> /dev/null \
         || exit 0;
 
@@ -156,7 +198,7 @@ ppi() {
 
 # Search history.
 
-qh() {
+function qh() {
     #           ┌─ enable colors for pipe
     #           │  ("--color=auto" enables colors only if
     #           │  the output is in the terminal)
@@ -169,8 +211,52 @@ qh() {
 
 # Search for text within the current directory.
 
-qt() {
+function qt() {
     grep -ir --color=always "$*" --exclude-dir=".git" --exclude-dir="node_modules" . | less -RX
     #     │└─ search all files under each directory, recursively
     #     └─ ignore case
+}
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+# `s` with no arguments opens the current directory in Sublime Text, otherwise
+# opens the given location
+
+function s() {
+    if [ $# -eq 0 ]; then
+        subl .;
+    else
+        subl "$@";
+    fi;
+}
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+# `o` with no arguments opens the current directory, otherwise opens the given
+# location
+function o() {
+    if [ $# -eq 0 ]; then
+        open .;
+    else
+        open "$@";
+    fi;
+}
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+# `v` with no arguments opens the current directory in Vim, otherwise opens the
+# given location
+function v() {
+	if [ $# -eq 0 ]; then
+		vim .;
+	else
+		vim "$@";
+	fi;
+}
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+# Create a new directory and enter it
+function mkd() {
+    mkdir -p "$@" && cd "$_";
 }
