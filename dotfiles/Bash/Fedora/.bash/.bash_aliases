@@ -26,12 +26,12 @@ alias datenow='date +"%m-%d-%y"'
 alias diff='colordiff'
 alias vimconfig='vim ~/.vimrc'
 alias sublime='subl' #subl & sublime-text are the same
-alias editprompt='atom ~/.bash_prompt'
+alias editprompt='atom ~/.bash/.bash_prompt'
 alias editprofile='atom ~/.bash_profile'
-alias editfunctions='atom ~/.bash_functions'
-alias editalias='vim ~/.bash_aliases'
+alias editfunctions='atom ~/.bash/.bash_functions'
+alias editalias='vim ~/.bash/.bash_aliases'
 alias applyalias='source ~/.bashrc'
-alias gitcomplete='curl -OL https://github.com/git/git/raw/master/contrib/completion/git-completion.bash > ~/.git-completion.bash'
+alias gitcompletion='curl -OL https://github.com/git/git/raw/master/contrib/completion/git-completion.bash > ~/.git-completion.bash'
 
 #Networks
 alias ping='ping -c 5'
@@ -41,7 +41,8 @@ alias ports='netstat -tulanp'
 #GIT-related aliases
 alias gitignorehere='curl https://raw.githubusercontent.com/idevHive/Settings/master/dotfiles/Git/.gitignore > .gitignore'
 alias gogit='cd ~/Documents/GIT/repo/'
-alias gobash='cd ~/Documents/GIT/repo/Settings/dotfiles/Bash/Fedora/'
+alias gobash='cd ~/Documents/GIT/repo/Settings/dotfiles/Bash/Fedora/.bash/'
+alias salias='gobash && cp ~/.bash/.bash_aliases .bash_aliases' #updates the alias on the git repo to match the one on use
 alias gpull='git pull origin master'
 alias gpush='git push origin master'
 alias gs='git status'
@@ -49,8 +50,8 @@ alias ga='git add'
 alias gr='git rm'
 alias gc='git commit -m'
 #DNA = Download new aliases & UNA = Upload new aliases
-alias dna='curl https://raw.githubusercontent.com/idevhive/Settings/master/dotfiles/Bash/Fedora/.bash_aliases > ~/.bash_aliases'
-alias una='pathere=$(pwd) && gobash && cp ~/.bash_aliases .bash_aliases && ga . && gc "Update aliases for Fedora" && gps && cd $pathere && unset pathere'
+alias dna='curl https://raw.githubusercontent.com/idevHive/Settings/master/dotfiles/Bash/Fedora/.bash/.bash_aliases > ~/.bash/.bash_aliases'
+alias una='pathere=$(pwd) && salias && ga . && gc "Update aliases for Fedora" && gpush && cd $pathere && unset pathere'
 
 #XAMPP-related aliases
 alias lampp='pathere=$(pwd) && cd /opt/lampp && sudo ./manager-linux-x64.run && cd $pathere && unset pathere'
