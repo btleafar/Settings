@@ -11,12 +11,12 @@ source_bash_files() {
 	declare -r CURRENT_DIRECTORY="$(pwd)"
 
 	declare -r -a FILES_TO_SOURCE=(
-		"bash_aliases"
-		"bash_exports"
-		"bash_functions"
-		"bash_options"
-		"bash_prompt"
-		"bash.local"	# For local settings that should
+		".bash/.bash_aliases"
+		".bash/.bash_exports"
+		".bash/.bash_functions"
+		".bash/.bash_options"
+		".bash/.bash_prompt"
+		".bash.local"	# For local settings that should
 						# not be under version control.
 	)
 
@@ -27,7 +27,7 @@ source_bash_files() {
 
 	for i in ${!FILES_TO_SOURCE[*]}; do
 
-		file="$HOME/.${FILES_TO_SOURCE[$i]}"
+		file="$HOME/${FILES_TO_SOURCE[$i]}"
 
 		[ -r "$file" ] \
 			&& . "$file"
