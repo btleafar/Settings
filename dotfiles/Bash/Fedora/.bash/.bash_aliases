@@ -57,6 +57,8 @@ alias gbm='git branch --merged'
 alias gundo='git reset --hard' #folowed by the SHA1 wanted from: `gl`
 alias gpull='git pull origin master'
 alias gpush='git push origin master'
+alias gdlocal='git branch -d' # delete a locla branch
+alias gdremote='git push origin --delete' # delete a remote branch
 #DNA = Download new aliases & UNA = Upload new aliases
 alias dna='curl https://raw.githubusercontent.com/idevHive/Settings/master/dotfiles/Bash/Fedora/.bash/.bash_aliases > ~/.bash/.bash_aliases'
 alias una='pathere=$(pwd) && salias && ga . && gc "Update aliases for Fedora" && gpush && cd $pathere && unset pathere'
