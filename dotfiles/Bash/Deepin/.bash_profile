@@ -1,9 +1,5 @@
 #!/bin/bash
 
-if [ -f ~/.git-completion.bash ]; then
-	source ~/.git-completion.bash
-fi
-
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 source_bash_files() {
@@ -18,6 +14,7 @@ source_bash_files() {
 		".bash/.bash_prompt"
 		".bash.local"	# For local settings that should
 						# not be under version control.
+        ".git-completion.bash"
 	)
 
 	local file=""
