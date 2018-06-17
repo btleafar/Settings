@@ -2,7 +2,7 @@
 #(because it uses 'dnf' on the section starting in line 7)
 #for general usage ignore/modify/remove reference to it. Although there is a version of
 #this file for Debian bassed systems (apt) on my Github here:
-#https://raw.githubusercontent.com/idevHive/Settings/master/Bash/.bash_aliases_debian'
+#https://github.com/idevHive/Settings/blob/master/dotfiles/Bash/Deepin/.bash/.bash_aliases
 
 #System-based aliases
 alias update='sudo dnf update && sudo dnf upgrade'
@@ -15,8 +15,10 @@ alias j='jobs -l'
 alias .1='cd ..'
 alias .2='cd ../../'
 alias .3='cd ../../../'
+alias l='ls -CF'
 alias ll='ls -l'
 alias la='ls -al'
+alias LA='ls -A'
 alias vi='vim'
 alias svi='sudo vi'
 alias edit='vim'
@@ -24,14 +26,15 @@ alias now='date +"%T"'
 alias timenow='now'
 alias datenow='date +"%m-%d-%y"'
 alias diff='colordiff'
-alias vimconfig='vim ~/.vimrc'
-alias sublime='subl' #subl & sublime-text are the same
+alias vimconfig='atom ~/.vimrc'
 alias editprompt='atom ~/.bash/.bash_prompt'
 alias editprofile='atom ~/.bash_profile'
 alias editfunctions='atom ~/.bash/.bash_functions'
 alias editalias='atom ~/.bash/.bash_aliases'
 alias applyalias='source ~/.bashrc'
 alias gitcompletion='curl -OL https://github.com/git/git/raw/master/contrib/completion/git-completion.bash > ~/.git-completion.bash'
+alias showasciis='google-chrome http:/www.theasciicode.com.ar/'
+#						└─replace it with `xdg-open` to use the default browser
 
 #Networks
 alias ping='ping -c 5'
@@ -50,10 +53,12 @@ alias gr='git rm'
 alias gc='git commit -m'
 alias gp='git push'
 alias gb='git branch'
+alias gf='git fetch -p origin'
 alias gl='git log --oneline -7'
 alias gla='git log --graph --oneline --all --decorate'
 alias gch='git checkout'
 alias gac='git commit -am'
+alias gbd='git branch -d' # same as --delete
 alias gbm='git branch --merged'
 alias gundo='git reset --hard' #folowed by the SHA1 wanted from: `gl`
 alias gpull='git pull origin master'
@@ -71,3 +76,4 @@ alias lampp='pathere=$(pwd) && cd /opt/lampp && sudo ./manager-linux-x64.run && 
 alias 42='cd ~/Documents/GIT/repo/42/'
 alias libft='42 && cd Projects/Basics/Libft/'
 alias fillit='42 && cd Projects/Basics/Fillit'
+alias today='cd ~/Documents/GIT/repo/42/Piscines/C/Day00/files/ex07'

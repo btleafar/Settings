@@ -270,7 +270,10 @@ function a() {
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+# Combine both mkdir and cd in a single command
 # Create a new directory and enter it
 function mkd() {
 	mkdir -p "$@" && cd "$_";
 }
+#function mkdircd () { mkdir -p "$@" && eval cd "\"\$$#\"";
+#}
