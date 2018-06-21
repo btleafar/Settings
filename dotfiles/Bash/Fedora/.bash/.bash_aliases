@@ -27,6 +27,7 @@ alias timenow='now'
 alias datenow='date +"%m-%d-%y"'
 alias diff='colordiff'
 alias vimconfig='atom ~/.vimrc'
+alias editexports='atom ~/.bash/.bash_exports'
 alias editprompt='atom ~/.bash/.bash_prompt'
 alias editprofile='atom ~/.bash_profile'
 alias editfunctions='atom ~/.bash/.bash_functions'
@@ -34,7 +35,11 @@ alias editalias='atom ~/.bash/.bash_aliases'
 alias applyalias='source ~/.bashrc'
 alias gitcompletion='curl -OL https://github.com/git/git/raw/master/contrib/completion/git-completion.bash > ~/.git-completion.bash'
 alias showasciis='google-chrome http:/www.theasciicode.com.ar/'
-#						└─replace it with `xdg-open` to use the default browser
+#                       └─replace it with `xdg-open` to use the default browser
+#42-Related
+alias compile="echo 'gcc -Wall -Wextra -Werror' ; gcc -Wall -Wextra -Werror"
+alias norm="echo 'norminette -r CheckForbiddenSourceHeader' ; norminette -r CheckForbiddenSourceHeader"
+alias editheader='atom ~/.vim/plugin/42header.vim'
 
 #Networks
 alias ping='ping -c 5'
@@ -63,7 +68,7 @@ alias gbm='git branch --merged'
 alias gundo='git reset --hard' #folowed by the SHA1 wanted from: `gl`
 alias gpull='git pull origin master'
 alias gpush='git push origin master'
-alias gdlocal='git branch -d' # delete a locla branch
+alias gdlocal='git branch -d' # delete a local branch
 alias gdremote='git push origin --delete' # delete a remote branch
 #DNA = Download new aliases & UNA = Upload new aliases
 alias dna='curl https://raw.githubusercontent.com/idevHive/Settings/master/dotfiles/Bash/Fedora/.bash/.bash_aliases > ~/.bash/.bash_aliases'
@@ -76,4 +81,4 @@ alias lampp='pathere=$(pwd) && cd /opt/lampp && sudo ./manager-linux-x64.run && 
 alias 42='cd ~/Documents/GIT/repo/42/'
 alias libft='42 && cd Projects/Basics/Libft/'
 alias fillit='42 && cd Projects/Basics/Fillit'
-alias today='cd ~/Documents/GIT/repo/42/Piscines/C/Day00/files/ex07'
+alias today='cd ~/Documents/GIT/repo/42/Piscines/C/Day00/'

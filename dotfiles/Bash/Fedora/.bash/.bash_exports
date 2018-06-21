@@ -5,9 +5,16 @@
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+# Make new EMAIL and USER variables for the 42 header.
+
+export USER="rtorres-"
+export MAIL="rtorres-@student.42.us.org"
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
 # Make `Sublime Text` the default editor.
 
-export EDITOR="subl"
+export EDITOR="atom"
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
