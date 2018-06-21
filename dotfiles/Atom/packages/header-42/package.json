@@ -1,0 +1,66 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "/tmp/d-118521-19765-1usn8gp.j3cvxi529/package.tgz",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "/tmp/d-118521-19765-1usn8gp.j3cvxi529/package.tgz",
+        "spec": "/tmp/d-118521-19765-1usn8gp.j3cvxi529/package.tgz",
+        "type": "local"
+      },
+      "/tmp/apm-install-dir-118521-19765-a5mmrp.tkb2xfxbt9"
+    ]
+  ],
+  "_from": "../d-118521-19765-1usn8gp.j3cvxi529/package.tgz",
+  "_id": "header-42@0.3.3",
+  "_inCache": true,
+  "_location": "/header-42",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "/tmp/d-118521-19765-1usn8gp.j3cvxi529/package.tgz",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "/tmp/d-118521-19765-1usn8gp.j3cvxi529/package.tgz",
+    "spec": "/tmp/d-118521-19765-1usn8gp.j3cvxi529/package.tgz",
+    "type": "local"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "file:../d-118521-19765-1usn8gp.j3cvxi529/package.tgz",
+  "_shasum": "fe8706a5f1a61a6ba17dfa42c01e24c004aef2e3",
+  "_shrinkwrap": null,
+  "_spec": "/tmp/d-118521-19765-1usn8gp.j3cvxi529/package.tgz",
+  "_where": "/tmp/apm-install-dir-118521-19765-a5mmrp.tkb2xfxbt9",
+  "bugs": {
+    "url": "https://github.com/Kerosene2000/atom-header-42/issues"
+  },
+  "dependencies": {
+    "moment": "2.10.6",
+    "sprintf-js": "1.0.3"
+  },
+  "description": "Add the 42 header to your project files",
+  "devDependencies": {},
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "homepage": "https://github.com/Kerosene2000/atom-header-42#readme",
+  "keywords": [
+    "42",
+    "header"
+  ],
+  "license": "MIT",
+  "main": "./lib/header-42",
+  "name": "header-42",
+  "optionalDependencies": {},
+  "readme": "# header-42 package\n\nAn atom package to add the 42 header to your files.\n\nYou can trigger it with the `ctrl-alt-h` shortcut.\n\nsupported header formats are:\n`#`, `/* */`, `<!-- -->`, `[[ ]]`, `(* *)`, `{- -}`, `;`\n\n[Image is from nasa APOD website](http://apod.nasa.gov/apod/ap150731.html)\n\n![42 header in action](http://i.imgur.com/xyGCPjm.png)\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kerosene2000/atom-header-42.git"
+  },
+  "version": "0.3.3"
+}
