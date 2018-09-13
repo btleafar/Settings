@@ -19,7 +19,8 @@ alias l='ls -CF'
 alias ll='ls -l'
 alias la='ls -al'
 alias LA='ls -A'
-alias vi='vim'
+alias lsd='ls -d .*'
+alias {v,vi}='vim'
 alias svi='sudo vi'
 alias edit='vim'
 alias now='date +"%T"'
@@ -36,6 +37,8 @@ alias applyalias='source ~/.bashrc'
 alias gitcompletion='curl -OL https://github.com/git/git/raw/master/contrib/completion/git-completion.bash > ~/.git-completion.bash'
 alias showasciis='google-chrome http:/www.theasciicode.com.ar/'
 #                       └─replace it with `xdg-open` to use the default browser
+alias tor='cd ~/Documents/WEB/tor-browser_en-US && ./start-tor-browser.desktop'
+
 #42-Related
 alias compile="echo 'gcc -Wall -Wextra -Werror' ; gcc -Wall -Wextra -Werror"
 alias norm="echo 'norminette -r CheckForbiddenSourceHeader' ; norminette -r CheckForbiddenSourceHeader"
@@ -81,4 +84,4 @@ alias lampp='pathere=$(pwd) && cd /opt/lampp && sudo ./manager-linux-x64.run && 
 alias 42='cd ~/Documents/GIT/repo/42/'
 alias libft='42 && cd Projects/Basics/Libft/'
 alias fillit='42 && cd Projects/Basics/Fillit'
-alias today='cd ~/Documents/GIT/repo/42/Piscines/C/Day00/'
+alias today='cd ~/Documents/GIT/repo/42/Piscines/C/Day01/'
