@@ -5,7 +5,7 @@
 #https://github.com/idevHive/Settings/blob/master/dotfiles/Bash/Deepin/.bash/.bash_aliases
 
 #System-based aliases
-alias update="sudo dnf update && sudo dnf upgrade"
+alias update='sudo dnf update && sudo dnf upgrade'
 alias clean='sudo dnf clean all'
 
 #General Usage
@@ -54,9 +54,9 @@ alias gitignorehere='curl https://raw.githubusercontent.com/idevHive/Settings/ma
 alias gogit='cd ~/Documents/GIT/repo/'
 #DNA = Download new aliases & UNA = Upload new aliases
 alias dna='curl https://raw.githubusercontent.com/idevHive/Settings/master/dotfiles/Bash/Fedora/.bash/.bash_aliases > ~/.bash/.bash_aliases'
-alias una="pathere=$(pwd) && salias && ga . && gc "Update aliases for Fedora" && gp && cd $pathere && unset pathere"
+alias una='pathere=$(pwd) && salias && ga . && gc "Update aliases for Fedora" && gp && cd $pathere && unset pathere'
 #updates the alias on the git repo to match the one on use (`s`alias -> stands for sync)
-alias salias="gobash && cp ~/.bash/.bash_aliases .bash_aliases"
+alias salias='gobash && cp ~/.bash/.bash_aliases .bash_aliases'
 alias gobash='cd ~/Documents/GIT/repo/Settings/dotfiles/Bash/Fedora/.bash/'
 alias gs='git status'
 alias ga='git add'
@@ -78,7 +78,7 @@ alias gdlocal='git branch -d' # delete a local branch
 alias gdremote='git push origin --delete' # delete a remote branch
 
 #XAMPP-related aliases
-alias lampp="pathere=$(pwd) && cd /opt/lampp && sudo ./manager-linux-x64.run && cd $pathere && unset pathere"
+alias lampp='pathere=$(pwd) && cd /opt/lampp && sudo ./manager-linux-x64.run && cd $pathere && unset pathere'
 
 #42 repos shortcuts
 alias 42='cd ~/Documents/GIT/repo/42/'
