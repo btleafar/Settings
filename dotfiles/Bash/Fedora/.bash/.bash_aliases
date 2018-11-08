@@ -85,3 +85,8 @@ alias 42='cd ~/Documents/GIT/repo/42/'
 alias libft='42 && cd Projects/Basics/Libft/'
 alias fillit='42 && cd Projects/Basics/Fillit'
 alias today='cd ~/Documents/GIT/repo/42/Piscines/C/Day01/'
+
+#NOTES:
+#1. we need to run → '$ sudo passwd root' in order to enable the command 'su -'
+#2. if we want to upgrade our distro version we need to run:
+## → '# dnf clean all && dnf -y distro-sync && dnf -y update'
