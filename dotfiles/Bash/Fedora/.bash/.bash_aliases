@@ -52,12 +52,9 @@ alias ports='netstat -tulanp'
 #GIT-related aliases
 alias gitignorehere='curl https://raw.githubusercontent.com/idevHive/Settings/master/dotfiles/Git/.gitignore > .gitignore'
 alias gogit='cd ~/Documents/GIT/repo/'
-#DNA = Download new aliases & UNA = Upload new aliases
-alias dna='curl https://raw.githubusercontent.com/idevHive/Settings/master/dotfiles/Bash/Fedora/.bash/.bash_aliases > ~/.bash/.bash_aliases'
-alias una='pathere=$(pwd) && salias && ga . && gc "Update aliases for Fedora" && gp && cd $pathere && unset pathere'
-#updates the alias on the git repo to match the one on use (`s`alias -> stands for sync)
-alias salias='gobash && cp ~/.bash/.bash_aliases .bash_aliases'
 alias gobash='cd ~/Documents/GIT/repo/Settings/dotfiles/Bash/Fedora/.bash/'
+#updates the alias on the git repo to match the one on use (`s`alias -> stands for sync)
+alias salias='pathere=$(pwd) && gobash && cp ~/.bash/.bash_aliases .bash_aliases && cd $pathere && unset pathere'
 alias gs='git status'
 alias ga='git add'
 alias gr='git rm'
@@ -76,6 +73,9 @@ alias gpull='git pull origin master'
 alias gpush='git push origin master'
 alias gdlocal='git branch -d' # delete a local branch
 alias gdremote='git push origin --delete' # delete a remote branch
+#DNA = Download new aliases & UNA = Upload new aliases
+alias dna='curl https://raw.githubusercontent.com/idevHive/Settings/master/dotfiles/Bash/Fedora/.bash/.bash_aliases > ~/.bash/.bash_aliases'
+alias una='pathere=$(pwd) && salias && ga . && gc "Update aliases for Fedora" && gpush && cd $pathere && unset pathere'
 
 #XAMPP-related aliases
 alias lampp='pathere=$(pwd) && cd /opt/lampp && sudo ./manager-linux-x64.run && cd $pathere && unset pathere'
