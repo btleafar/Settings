@@ -12,9 +12,9 @@ alias clean='sudo dnf clean all'
 alias c='clear'
 alias h='history'
 alias j='jobs -l'
-alias .1='cd ..'
-alias .2='cd ../../'
-alias .3='cd ../../../'
+alias .1='cd ..'			#This can now be accomplished
+alias .2='cd ../../'		#ussing the function 'up'
+alias .3='cd ../../../'		#ex.: $ up n == .n <-- where n represents the number
 alias l='ls -CF'
 alias ll='ls -l'
 alias la='ls -al'
