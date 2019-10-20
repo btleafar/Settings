@@ -39,7 +39,7 @@
     "url": "https://github.com/Kerosene2000/atom-header-42/issues"
   },
   "dependencies": {
-    "moment": "2.10.6",
+    "moment": "2.24.0",
     "sprintf-js": "1.0.3"
   },
   "description": "Add the 42 header to your project files",
